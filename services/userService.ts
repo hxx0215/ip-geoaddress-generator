@@ -8,7 +8,7 @@ export interface UserResponse {
 class UserService {
   async fetchUser(country: string): Promise<User> {
     const response = await axios.get<UserResponse>(
-      `https://randomuser.me/api/?nat=${country}&inc=name,phone,id`
+      `https://hxx0215-random-user.hf.space/api/?nat=${country}&inc=name,phone,id`
     );
     return response.data.results[0];
   }

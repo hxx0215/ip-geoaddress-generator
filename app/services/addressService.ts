@@ -50,7 +50,7 @@ export default class WFDService {
    */
   async getRandomUser(country: string) {
     try {
-      const url = `https://randomuser.me/api/?nat=${country}&inc=name,phone,id`;
+      const url = `https://hxx0215-random-user.hf.space/api/?nat=${country}&inc=name,phone,id`;
       const response = await axios.get<{ results: User[] }>(url);
       return response.data;
     } catch (error) {
